@@ -65,6 +65,5 @@ public class DriverManager {
 
     public static void closeBrowser() {
         DriverManager.driver.quit();
-        DriverManager.driver.close();
     }
 }

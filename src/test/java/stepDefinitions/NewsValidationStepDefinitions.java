@@ -1,5 +1,6 @@
 package stepDefinitions;
 
+import copy.Copy;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.When;
@@ -8,51 +9,43 @@ import pageObjects.NewsPage;
 
 import utils.DriverManager;
 
-import java.io.IOException;
-import java.nio.file.Files;
-import java.nio.file.Paths;
-import java.util.Properties;
-
 import static org.junit.Assert.assertTrue;
 
 
 public class NewsValidationStepDefinitions {
-    public static Properties prop = new Properties();
-    private String articleTitle;
-    private String articleContent;
 
     NewsPage newsPage = new NewsPage(DriverManager.driver);
 
-    @Given("I am on The Guardian news page")
+    @Given("the user is on The Guardian news page")
     public void iAmOnTheGuardianNewsPage() {
         // Nothing additional to do here since news page is already launched using hooks
     }
 
-    @And("I extract the title and content of the first news article")
+    @And("the user extracts the title and content of the first news article")
     public void iExtractTheTitleAndContentOfTheFirstNewsArticle() {
         // Extract the title and content of the first news article
-        articleTitle = newsPage.extractArticleTitle();
-        articleContent = newsPage.extractArticleContent();
+        newsPage.extractArticleTitle();
+        newsPage.extractArticleContent();
     }
 
-    @When("I search for the article title and content on Google")
+    @When("the user searches for the article title and content on Google")
     public void iSearchForTheArticleTitleAndContentOnGoogle() {
-
-        newsPage.performGoogleSearch(articleTitle + " " + articleContent);
+        newsPage.searchForNews();
     }
 
-    @Then("I should find at least two matching results")
+    @Then("at least two matching results should be found")
     public void iShouldFindAtLeastTwoMatchingResults() {
-        assertTrue("News is fake as match is less then 2", newsPage.verifyMatchingResults(2));
-        DriverManager.closeBrowser();
+        assertTrue(Copy.FAKE_MESSAGE_TEXT, newsPage.verifyMatchingResults(2));
     }
 
-    @When("I search for a non-existing article title and content on Google")
+    @When("the user searches for a non-existing article title and content on Google")
     public void iSearchForANonExistingArticleTitleAndContentOnGoogle() {
+        newsPage.searchForNews();
     }
 
-    @Then("I should see no results")
+    @Then("no search results should be displayed")
     public void iShouldSeeNoResults() {
+        assertTrue(Copy.FAKE_MESSAGE_TEXT, newsPage.verifyMatchingResults(0));
     }
 
 }
