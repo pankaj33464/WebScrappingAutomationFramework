@@ -5,7 +5,7 @@ import io.cucumber.testng.AbstractTestNGCucumberTests;
 import org.testng.annotations.Test;
 
 public class TestRunner{
-    @CucumberOptions(tags = "@Sanity",
+    @CucumberOptions(tags = "@PositiveTest",
             features = {"features"},
             glue = {"stepDefinitions"},
             plugin = {"html:target/results.html", "message:target/results.ndjson"},
