@@ -23,25 +23,13 @@ public class NewsValidationStepDefinitions {
 
     NewsPage newsPage = new NewsPage(DriverManager.driver);
 
-    {
-        try {
-            prop.load(Files.newInputStream(Paths.get("./src/test/resources/config/testconfig.properties")));
-        } catch (IOException e) {
-            throw new RuntimeException(e);
-        }
-    }
-
     @Given("I am on The Guardian news page")
     public void iAmOnTheGuardianNewsPage() {
-
-        String url = prop.getProperty("url");
-        DriverManager.openBrowser("chrome");
-        DriverManager.driver.get(url);
+        // Nothing additional to do here since news page is already launched using hooks
     }
 
     @And("I extract the title and content of the first news article")
     public void iExtractTheTitleAndContentOfTheFirstNewsArticle() {
-        // Nothing additional to do here since the extraction is done in the Given step
         // Extract the title and content of the first news article
         articleTitle = newsPage.extractArticleTitle();
         articleContent = newsPage.extractArticleContent();

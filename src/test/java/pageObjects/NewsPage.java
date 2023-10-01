@@ -1,28 +1,23 @@
 package pageObjects;
 
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.support.FindBy;
-import org.openqa.selenium.support.How;
-import org.openqa.selenium.support.PageFactory;
-import org.testng.Assert;
 import utils.Common;
 import utils.DriverManager;
 
 import java.util.List;
 
-public class NewsPage {
-
-    Common common = new Common();
+public class NewsPage extends BasePage {
 
     private String articleTitle;
     private String articleContent;
     private List<String> searchResults;
-    public NewsPage(WebDriver driver) {
-        PageFactory.initElements(driver, this);
 
+    public NewsPage(WebDriver driver) {
+        super(driver);
     }
 
     By firstArticleTitle = By.className("fc-item__header");
@@ -39,13 +34,15 @@ public class NewsPage {
     public WebElement getFirstArticleTitle() {
         return DriverManager.driver.findElement(firstArticleTitle);
     }
-    public WebElement getSearchBox(){
+
+    public WebElement getSearchBox() {
         return DriverManager.driver.findElement(googleSearchBox);
     }
 
-    public List<WebElement> getResultItemsFromSearch(){
+    public List<WebElement> getResultItemsFromSearch() {
         return DriverManager.driver.findElements(resultItemsFromSearch);
     }
+
     public String extractArticleTitle() {
         // Extract the title of the first news article from The Guardian's page
         articleTitle = getFirstArticleTitle().getText();
