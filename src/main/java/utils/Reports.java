@@ -7,8 +7,6 @@ public class Reports {
     public static ExtentSparkReporter reporter = new ExtentSparkReporter(System.getProperty("user.dir") + "\\reports\\webScrappingAutomation.html");
     public static ExtentReports extentReports;
 
-
-
     public static ExtentReports attachReport(String projectName) {
         reporter.config().setReportName(projectName);
         reporter.config().setDocumentTitle("Test Automation Results");
