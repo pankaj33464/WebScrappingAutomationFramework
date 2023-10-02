@@ -29,15 +29,14 @@ Technical Specification:
 # Select profile for easy browser access from maven profiles
 ![image](https://github.com/pankaj33464/WebScrappingAutomationFramework/assets/5111005/a87f22d7-96fc-4252-a623-5d0454f66cd0)
 
-# For better reusability 
+# For better reusability of code
 ![image](https://github.com/pankaj33464/WebScrappingAutomationFramework/assets/5111005/1211d636-6cdf-4e1c-a6e1-832dd10e9b38)
 ![image](https://github.com/pankaj33464/WebScrappingAutomationFramework/assets/5111005/9fd6a9ab-4f66-4e84-8d59-42c030fa1537)
 
-# Logging 
-![image](https://github.com/pankaj33464/WebScrappingAutomationFramework/assets/5111005/36718dfc-cadb-43ac-8e7f-28822d61e87f)
+# Logging - Currently set at INFO level only
+![image](https://github.com/pankaj33464/WebScrappingAutomationFramework/assets/5111005/6315380b-eacf-4971-93e9-6c2ecf9b6cd9)
 
-
-# Project Structure:
+# Complete Project Structure:
 
 ![image](https://github.com/pankaj33464/WebScrappingAutomationFramework/assets/5111005/38993412-be5d-43a7-a6c5-44b68203d40a)
 
