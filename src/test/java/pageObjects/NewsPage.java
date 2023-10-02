@@ -58,6 +58,12 @@ public class NewsPage extends BasePage {
     public String extractArticleTitle() {
         // Extract the title of the first news article from The Guardian's page
         articleTitle = getFirstArticleTitle().getText();
+
+        //For some news when they are LIVE, they have new line character
+        articleTitle = articleTitle.replaceAll("\\n", "");
+        if (articleTitle.startsWith("Live")) {
+            articleTitle = articleTitle.substring(4);
+        }
         return articleTitle;
     }
 
@@ -77,8 +83,14 @@ public class NewsPage extends BasePage {
      */
     public List<String> performGoogleSearch(String query) {
         // Perform a Google search and extract search results
+
+        //For some news when they are LIVE, they have new line character
+        String QueryWithoutNewLineChar = query.replaceAll("\\n", " ");
+        if (QueryWithoutNewLineChar.startsWith("Live")) {
+            QueryWithoutNewLineChar = QueryWithoutNewLineChar.substring(4);
+        }
         DriverManager.driver.get("https://www.google.com");
-        getSearchBox().sendKeys(query);
+        getSearchBox().sendKeys(QueryWithoutNewLineChar);
         getSearchBox().sendKeys(Keys.RETURN);
         Common.takeScreenshot("List of all news");
         // This is a simplistic approach I have used for now
