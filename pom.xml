@@ -90,6 +90,19 @@
             <artifactId>extentreports-cucumber7-adapter</artifactId>
             <version>${extentreports-cucumber7-adapter-version}</version>
         </dependency>
+        <!-- SLF4J and Logback dependencies -->
+        <dependency>
+            <groupId>org.slf4j</groupId>
+            <artifactId>slf4j-api</artifactId>
+            <version>1.7.32</version> <!-- Replace with the latest version -->
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>ch.qos.logback</groupId>
+            <artifactId>logback-classic</artifactId>
+            <version>1.2.6</version> <!-- Replace with the latest version -->
+            <scope>test</scope>
+        </dependency>
     </dependencies>
 
     <build>
