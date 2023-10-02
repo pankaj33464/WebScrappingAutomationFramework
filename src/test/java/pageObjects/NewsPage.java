@@ -4,6 +4,8 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import utils.Common;
 import utils.DriverManager;
 
@@ -18,6 +20,8 @@ public class NewsPage extends BasePage {
     public NewsPage(WebDriver driver) {
         super(driver);
     }
+
+    private static final Logger logger = LoggerFactory.getLogger(NewsPage.class);
 
     By firstArticleTitle = By.className("fc-item__header");
 
@@ -43,6 +47,8 @@ public class NewsPage extends BasePage {
     }
 
     public void searchForNews() {
+        logger.info("Article Title " + articleTitle);
+        logger.info("Article Content " + articleContent);
         performGoogleSearch(articleTitle + " " + articleContent);
     }
 
@@ -77,6 +83,7 @@ public class NewsPage extends BasePage {
         Common.takeScreenshot("List of all news");
         // This is a simplistic approach I have used for now
         searchResults = extractSearchResultTexts(getResultItemsFromSearch());
+        logger.info("Search Results " + searchResults);
         return searchResults;
     }
 
