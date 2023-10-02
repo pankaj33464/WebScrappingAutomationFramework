@@ -27,7 +27,6 @@
         <junit-jupiter-version>5.10.0</junit-jupiter-version>
         <webdrivermanager-version>5.3.3</webdrivermanager-version>
         <extentreports-version>5.1.0</extentreports-version>
-        <cucumber-testng-version>7.13.0</cucumber-testng-version>
     </properties>
 
     <dependencies>
@@ -49,11 +48,6 @@
             <artifactId>cucumber-core</artifactId>
             <version>${cucumber-core-version}</version>
             <scope>test</scope>
-        </dependency>
-        <dependency>
-            <groupId>io.cucumber</groupId>
-            <artifactId>cucumber-testng</artifactId>
-            <version>${cucumber-testng-version}</version>
         </dependency>
         <!--Gherkin-->
         <dependency>
@@ -91,12 +85,10 @@
             <version>${extentreports-version}</version>
         </dependency>
         <dependency>
-            <groupId>org.testng</groupId>
-            <artifactId>testng</artifactId>
-            <version>7.7.0</version>
-            <scope>test</scope>
+            <groupId>tech.grasshopper</groupId>
+            <artifactId>extentreports-cucumber7-adapter</artifactId>
+            <version>1.7.0</version>
         </dependency>
-
     </dependencies>
 
     <build>
@@ -140,9 +132,6 @@
                     <artifactId>maven-surefire-plugin</artifactId>
                     <version>${maven-surefire-plugin.version}</version>
                     <configuration>
-                        <suiteXmlFiles>
-                            <suiteXmlFile>TestNG.xml</suiteXmlFile>
-                        </suiteXmlFiles>
                         <properties>
                             <includeTags>${environment}</includeTags>
                         </properties>
