@@ -5,9 +5,10 @@ Technical Specification:
 2. Java 17
 3. Cucumber
 4. Selenium
-5. Extent Reports
-6. Driver Manager
-7. Maven Plugins
+5. SLF4J and logback are used for better logging
+6. Extent Reports
+7. Driver Manager
+8. Maven Plugins
 
 # Highlights:
 1.  POM(Page object model)
@@ -32,6 +33,8 @@ Technical Specification:
 ![image](https://github.com/pankaj33464/WebScrappingAutomationFramework/assets/5111005/1211d636-6cdf-4e1c-a6e1-832dd10e9b38)
 ![image](https://github.com/pankaj33464/WebScrappingAutomationFramework/assets/5111005/9fd6a9ab-4f66-4e84-8d59-42c030fa1537)
 
+# Logging 
+![image](https://github.com/pankaj33464/WebScrappingAutomationFramework/assets/5111005/36718dfc-cadb-43ac-8e7f-28822d61e87f)
 
 
 # Project Structure:
