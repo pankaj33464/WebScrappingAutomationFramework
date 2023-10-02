@@ -1,6 +1,6 @@
 Feature: News Validation
 
-  #While your scenarios were not complex enough to warrant a Scenario Outline, I kept them separate for clarity.
+  #While scenarios were not complex enough to warrant a Scenario Outline, I kept them separate for clarity.
   # If scenarios grow in complexity, we should consider using a Scenario Outline.
   @PositiveTest @IntegrationTest @Sanity
   Scenario: Verify the validity of a news article from The Guardian
