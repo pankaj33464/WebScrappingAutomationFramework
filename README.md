@@ -39,7 +39,8 @@ Technical Specification:
 
 # Project Structure:
 
-![image](https://github.com/pankaj33464/WebScrappingAutomationFramework/assets/5111005/10722f8b-3329-4053-afc0-52efd84cf212)
+![image](https://github.com/pankaj33464/WebScrappingAutomationFramework/assets/5111005/38993412-be5d-43a7-a6c5-44b68203d40a)
+
 
 # Reports with historical trend analysis:
 
