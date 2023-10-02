@@ -27,6 +27,7 @@
         <junit-jupiter-version>5.10.0</junit-jupiter-version>
         <webdrivermanager-version>5.3.3</webdrivermanager-version>
         <extentreports-version>5.1.0</extentreports-version>
+        <extentreports-cucumber7-adapter-version>1.7.0</extentreports-cucumber7-adapter-version>
     </properties>
 
     <dependencies>
@@ -87,7 +88,7 @@
         <dependency>
             <groupId>tech.grasshopper</groupId>
             <artifactId>extentreports-cucumber7-adapter</artifactId>
-            <version>1.7.0</version>
+            <version>${extentreports-cucumber7-adapter-version}</version>
         </dependency>
     </dependencies>
 
