@@ -1,6 +1,11 @@
 # WebScrappingAutomationFramework
 
-Technical Specification:
+# Steps to import 
+Download ZIP  or clone
+Import project as maven project 
+run mvn clean test
+
+# Technical Specification:
 1. JUnit
 2. Java 17
 3. Cucumber
