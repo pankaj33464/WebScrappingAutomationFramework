@@ -1,9 +1,17 @@
 # WebScrappingAutomationFramework
 
 # Steps to import 
-Download ZIP  or clone
-Import project as maven project 
-run mvn clean test
+1. Download ZIP  or clone
+2. Import project as maven project
+
+# Different options to run project
+Run a scenario﻿
+Click Run Test in the gutter next to the scenario that you want to run and select Run 'Scenario: <name>'.
+![image](https://github.com/pankaj33464/WebScrappingAutomationFramework/assets/5111005/54bb2978-e462-4cc9-95e5-31dab7d1fbba)
+
+Running Cucumber tests with JUnit or TestRunner class
+Click Run Test in the gutter and select Run 'test name'.
+![image](https://github.com/pankaj33464/WebScrappingAutomationFramework/assets/5111005/07184a99-4c14-4bb1-bc87-909ccc8b9105)
 
 # Technical Specification:
 1. JUnit
@@ -56,18 +64,7 @@ run mvn clean test
 # FindBug static code analysis tool report 
 ![image](https://github.com/pankaj33464/WebScrappingAutomationFramework/assets/5111005/1b92f3fe-4fb3-4023-8328-19f9e1bc0d15)
 
-# Different options to run project
-Run Cucumber tests﻿
-The quickest way of running Cucumber tests is by using the icons in the gutter next to the necessary feature or scenario. The icons change depending on the state of your test: Run Test marks new tests; the Run test icon marks successful tests; the Rerun the Run button icon marks failed tests.
 
-Run a scenario﻿
-Click Run Test in the gutter next to the scenario that you want to run and select Run 'Scenario: <name>'.
-![image](https://github.com/pankaj33464/WebScrappingAutomationFramework/assets/5111005/54bb2978-e462-4cc9-95e5-31dab7d1fbba)
-
-
-Running Cucumber tests with JUnit or TestRunner class
-Click Run Test in the gutter and select Run 'test name'.
-![image](https://github.com/pankaj33464/WebScrappingAutomationFramework/assets/5111005/07184a99-4c14-4bb1-bc87-909ccc8b9105)
 
 
 
