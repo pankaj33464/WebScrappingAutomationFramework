@@ -1,49 +1,47 @@
-package pageObjects;
+package pageObjectsModels.pageActions;
 
-import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import pageObjectsModels.BasePage;
+import pageObjectsModels.pageLocators.NewsPageLocators;
 import utils.Common;
 import utils.DriverManager;
 
 import java.util.List;
 
-public class NewsPage extends BasePage {
+public class NewsPageActions extends BasePage {
+
+    NewsPageLocators newsPageLocators;
 
     private String articleTitle;
     private String articleContent;
     private List<String> searchResults;
 
-    public NewsPage(WebDriver driver) {
+    public NewsPageActions(WebDriver driver) {
         super(driver);
+        this.newsPageLocators = new NewsPageLocators();
     }
 
-    private static final Logger logger = LoggerFactory.getLogger(NewsPage.class);
+    private static final Logger logger = LoggerFactory.getLogger(NewsPageActions.class);
 
-    By firstArticleTitle = By.className("fc-item__header");
-
-    By googleSearchBox = By.name("q");
-    By firstArticleContent = By.className("fc-item__standfirst");
-
-    By resultItemsFromSearch = By.cssSelector(".tF2Cxc");
 
     public WebElement getFirstArticleContent() {
-        return DriverManager.driver.findElement(firstArticleContent);
+        return DriverManager.driver.findElement(newsPageLocators.firstArticleContent);
     }
 
     public WebElement getFirstArticleTitle() {
-        return DriverManager.driver.findElement(firstArticleTitle);
+        return DriverManager.driver.findElement(newsPageLocators.firstArticleTitle);
     }
 
     public WebElement getSearchBox() {
-        return DriverManager.driver.findElement(googleSearchBox);
+        return DriverManager.driver.findElement(newsPageLocators.googleSearchBox);
     }
 
     public List<WebElement> getResultItemsFromSearch() {
-        return DriverManager.driver.findElements(resultItemsFromSearch);
+        return DriverManager.driver.findElements(newsPageLocators.resultItemsFromSearch);
     }
 
     public void searchForNews() {

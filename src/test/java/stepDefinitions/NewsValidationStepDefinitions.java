@@ -3,20 +3,18 @@ package stepDefinitions;
 import copy.Copy;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
-import io.cucumber.java.en.When;
 import io.cucumber.java.en.Then;
+import io.cucumber.java.en.When;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import pageObjects.NewsPage;
-
+import pageObjectsModels.pageActions.NewsPageActions;
 import utils.DriverManager;
 
 import static org.junit.Assert.assertTrue;
 
-
 public class NewsValidationStepDefinitions {
 
-    NewsPage newsPage = new NewsPage(DriverManager.driver);
+    NewsPageActions newsPage = new NewsPageActions(DriverManager.driver);
     private static final Logger logger = LoggerFactory.getLogger(NewsValidationStepDefinitions.class);
 
     @Given("the user is on The Guardian news page")
