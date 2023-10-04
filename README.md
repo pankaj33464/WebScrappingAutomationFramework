@@ -1,4 +1,4 @@
-# Web Scrapping Automation Framework using Cucumber-Gherkin-Selenium-JUnit
+# Web Scrapping Automation Framework using Cucumber-BDD,Selenium,JUnit and Page Object Model
 
 # Steps to import 
 1. Download ZIP  or clone
