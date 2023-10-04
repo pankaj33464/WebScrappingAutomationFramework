@@ -3,7 +3,7 @@
 # Steps to import 
 1. Download ZIP  or clone
 2. Import project as maven project
-3. ![image](https://github.com/pankaj33464/WebScrappingAutomationFramework/assets/5111005/d945bdb9-48b1-4925-bacb-683b83dfe6e5)
+3. ![image](https://github.com/pankaj33464/WebScrappingAutomationFramework/assets/5111005/8e7c7763-8419-472d-9b6a-6f8b78aa93d9)
 
 # Different options to run project
 Run a scenario﻿
