@@ -79,7 +79,7 @@
             <version>${webdrivermanager-version}</version>
         </dependency>
 
-       <!-- Extent Reports-->
+        <!-- Extent Reports-->
         <dependency>
             <groupId>com.aventstack</groupId>
             <artifactId>extentreports</artifactId>
@@ -169,8 +169,7 @@
         </plugins>
     </build>
 
-    <!-- Setting up profiles as in real project multiple environments can exist-
-    Currently it's just show but not implemented fully -->
+    <!-- Setting up profiles as in real project multiple environments can exist -->
     <profiles>
         <profile>
             <id>local</id>
