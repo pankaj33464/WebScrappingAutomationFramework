@@ -1,4 +1,4 @@
-# WebScrappingAutomationFramework
+# Web Scrapping Automation Framework using Cucumber-Gherkin-Selenium-JUnit
 
 # Steps to import 
 1. Download ZIP  or clone
