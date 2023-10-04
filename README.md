@@ -3,6 +3,7 @@
 # Steps to import 
 1. Download ZIP  or clone
 2. Import project as maven project
+3. ![image](https://github.com/pankaj33464/WebScrappingAutomationFramework/assets/5111005/d945bdb9-48b1-4925-bacb-683b83dfe6e5)
 
 # Different options to run project
 Run a scenario﻿
@@ -50,12 +51,9 @@ Click Run Test in the gutter and select Run 'test name'.
 ![image](https://github.com/pankaj33464/WebScrappingAutomationFramework/assets/5111005/6315380b-eacf-4971-93e9-6c2ecf9b6cd9)
 
 # Complete Project Structure:
-
-![image](https://github.com/pankaj33464/WebScrappingAutomationFramework/assets/5111005/38993412-be5d-43a7-a6c5-44b68203d40a)
-
+![image](https://github.com/pankaj33464/WebScrappingAutomationFramework/assets/5111005/e58bf196-c958-4345-93e8-12d34be0e8b6)
 
 # Reports with historical trend analysis:
-
 ![image](https://github.com/pankaj33464/WebScrappingAutomationFramework/assets/5111005/1d441a93-1cb9-4e93-99f7-7b6ae7071d42)
 ![image](https://github.com/pankaj33464/WebScrappingAutomationFramework/assets/5111005/cf9ae2fc-8bd5-429f-8d1c-50c0fdce7d5c)
 ![image](https://github.com/pankaj33464/WebScrappingAutomationFramework/assets/5111005/868c47b6-5063-40b5-a309-647959603e82)
