@@ -1,5 +1,6 @@
 package pageObjectsModels.pageActions;
 
+import copy.Copy;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -48,6 +49,11 @@ public class NewsPageActions extends BasePage {
         logger.info("Article Title " + articleTitle);
         logger.info("Article Content " + articleContent);
         performGoogleSearch(articleTitle + " " + articleContent);
+    }
+
+    public void searchForNonExistingNews() {
+        logger.info("Searching for non-existing news using keyword: " + Copy.NON_EXISTING_NEWS_KEYWORD);
+        performGoogleSearch(Copy.NON_EXISTING_NEWS_KEYWORD);
     }
 
     /**
