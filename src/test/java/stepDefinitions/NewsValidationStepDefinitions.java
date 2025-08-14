@@ -1,7 +1,6 @@
 package stepDefinitions;
 
 import copy.Copy;
-import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
@@ -22,7 +21,7 @@ public class NewsValidationStepDefinitions {
         // Nothing additional to do here since news page is already launched using hooks
     }
 
-    @And("the user extracts the title and content of the first news article")
+    @When("the user extracts the title and content of the first news article")
     public void iExtractTheTitleAndContentOfTheFirstNewsArticle() {
         // Extract the title and content of the first news article
         newsPage.extractArticleTitle();
@@ -36,10 +35,10 @@ public class NewsValidationStepDefinitions {
         logger.info("Search for news on google");
     }
 
-    @Then("at least two matching results should be found")
-    public void iShouldFindAtLeastTwoMatchingResults() {
-        assertTrue(Copy.FAKE_MESSAGE_TEXT, newsPage.verifyMatchingResults(2));
-        logger.info("Matching results");
+    @Then("at least {int} matching results should be found")
+    public void iShouldFindAtLeastTwoMatchingResults(int expectedCount) {
+        assertTrue(Copy.FAKE_MESSAGE_TEXT, newsPage.countMatchingResults() >= expectedCount);
+        logger.info("Matching results count is greater than or equal to {}", expectedCount);
     }
 
     @When("the user searches for a non-existing article title and content on Google")
@@ -50,8 +49,8 @@ public class NewsValidationStepDefinitions {
 
     @Then("no matching results should be found")
     public void iShouldSeeNoResults() {
-        assertTrue(Copy.FAKE_MESSAGE_TEXT, newsPage.verifyMatchingResults(0));
-        logger.info("no search result assertion is in progress");
+        assertTrue("Expected no matching results", newsPage.countMatchingResults() == 0);
+        logger.info("No search results were found as expected");
     }
 
 }
