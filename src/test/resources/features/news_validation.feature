@@ -1,18 +1,17 @@
 Feature: News Validation
 
-  #While scenarios were not complex enough to warrant a Scenario Outline, I kept them separate for clarity.
-  # If scenarios grow in complexity, we should consider using a Scenario Outline.
-  @PositiveTest @IntegrationTest @Sanity
-  Scenario: Verify the validity of a news article from The Guardian
+  Background:
     Given the user is on The Guardian news page
-    And the user extracts the title and content of the first news article
-    When the user searches for the article title and content on Google
-    Then at least two matching results should be found
+
+  @PositiveTest @IntegrationTest @Sanity
+  Scenario: Verify the validity of the first news article
+    When the user extracts the title and content of the first news article
+    And the user searches for the article title and content on Google
+    Then at least 2 matching results should be found
 
   @NegativeTest @Sanity
   Scenario: Verify no results for a non-existing news article on The Guardian
-    Given the user is on The Guardian news page
-    And the user extracts the title and content of the first news article
-    When the user searches for a non-existing article title and content on Google
+    When the user extracts the title and content of the first news article
+    And the user searches for a non-existing article title and content on Google
     Then no matching results should be found
 

@@ -115,15 +115,15 @@ public class NewsPageActions extends BasePage {
     }
 
     /**
-     * @param expectedCount count to verify if news is fake or not
-     * @return
+     * Counts the number of search results that match both the article title and content.
+     *
+     * @return number of matching search results
      */
-    public boolean verifyMatchingResults(int expectedCount) {
-        // Verify that at least the expected number of results match the article
+    public long countMatchingResults() {
         long matchingResultsCount = searchResults.stream()
                 .filter(result -> result.contains(articleTitle) && result.contains(articleContent))
                 .count();
         Common.takeScreenshot("Google Search Results");
-        return matchingResultsCount >= expectedCount;
+        return matchingResultsCount;
     }
 }
