@@ -44,11 +44,11 @@ public class NewsValidationStepDefinitions {
 
     @When("the user searches for a non-existing article title and content on Google")
     public void iSearchForANonExistingArticleTitleAndContentOnGoogle() {
-        newsPage.searchForNews();
+        newsPage.searchForNonExistingNews();
         logger.info("Search for news on google for non-existing article");
     }
 
-    @Then("no search results should be displayed")
+    @Then("no matching results should be found")
     public void iShouldSeeNoResults() {
         assertTrue(Copy.FAKE_MESSAGE_TEXT, newsPage.verifyMatchingResults(0));
         logger.info("no search result assertion is in progress");

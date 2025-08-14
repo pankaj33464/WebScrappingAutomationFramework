@@ -14,4 +14,5 @@ Feature: News Validation
     Given the user is on The Guardian news page
     And the user extracts the title and content of the first news article
     When the user searches for a non-existing article title and content on Google
-    Then no search results should be displayed
+    Then no matching results should be found
+
