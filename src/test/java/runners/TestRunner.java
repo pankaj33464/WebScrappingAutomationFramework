@@ -1,15 +1,8 @@
 package runners;
 
-import io.cucumber.junit.Cucumber;
-import io.cucumber.junit.CucumberOptions;
-import org.junit.runner.RunWith;
+import io.cucumber.junit.platform.engine.Cucumber;
 
-@RunWith(Cucumber.class)
-@CucumberOptions(tags = "@PositiveTest",
-        features = {"src/test/resources/features"},
-        glue = {"stepDefinitions"},
-        plugin = {"pretty", "com.aventstack.extentreports.cucumber.adapter.ExtentCucumberAdapter:"},
-        monochrome = true)
+@Cucumber
 public class TestRunner {
-
 }
+
