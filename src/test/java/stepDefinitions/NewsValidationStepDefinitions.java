@@ -9,7 +9,7 @@ import org.slf4j.LoggerFactory;
 import pageObjectsModels.pageActions.NewsPageActions;
 import utils.DriverManager;
 
-import static org.junit.Assert.assertTrue;
+import static org.junit.jupiter.api.Assertions.assertTrue;
 
 public class NewsValidationStepDefinitions {
 
@@ -37,7 +37,7 @@ public class NewsValidationStepDefinitions {
 
     @Then("at least {int} matching results should be found")
     public void iShouldFindAtLeastTwoMatchingResults(int expectedCount) {
-        assertTrue(Copy.FAKE_MESSAGE_TEXT, newsPage.countMatchingResults() >= expectedCount);
+        assertTrue(newsPage.countMatchingResults() >= expectedCount, Copy.FAKE_MESSAGE_TEXT);
         logger.info("Matching results count is greater than or equal to {}", expectedCount);
     }
 
@@ -49,7 +49,7 @@ public class NewsValidationStepDefinitions {
 
     @Then("no matching results should be found")
     public void iShouldSeeNoResults() {
-        assertTrue("Expected no matching results", newsPage.countMatchingResults() == 0);
+        assertTrue(newsPage.countMatchingResults() == 0, "Expected no matching results");
         logger.info("No search results were found as expected");
     }
 

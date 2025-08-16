@@ -1,6 +1,6 @@
 # Web Scrapping Automation Framework
 
-This project showcases an end‑to‑end web scraping framework built with Selenium WebDriver and Cucumber BDD. It follows the Page Object Model pattern, uses JUnit for running tests and produces rich Extent reports.
+This project showcases an end‑to‑end web scraping framework built with Selenium WebDriver and Cucumber BDD. It follows the Page Object Model pattern, uses JUnit 5 for running tests and produces rich Extent reports.
 
 ## Features
 
@@ -17,7 +17,7 @@ This project showcases an end‑to‑end web scraping framework built with Selen
 - Maven
 - Selenium
 - Cucumber
-- JUnit
+- JUnit 5
 
 ## Getting Started
 
